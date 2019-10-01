@@ -4,3 +4,13 @@ provider "aws" {
     region = "${var.aws_region}"
     #region = "us-east-2"
 }
+
+terraform {
+  	backend "remote" {
+    	organization = "RapidMatter"
+
+    workspaces {
+      	name = "terraform-cloud-aws-summit-toronto"
+    }
+  }
+}
