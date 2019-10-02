@@ -1,6 +1,6 @@
 resource "aws_instance" "web" {
     ami = "ami-c55673a0"
-    instance_type = "t2.nano"
+    instance_type = "t2.micro"
     key_name = "${var.aws_key_name}"
 
     tags = {
